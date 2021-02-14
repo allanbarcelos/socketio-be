@@ -33,6 +33,6 @@ function sendData(socket){
 
     setTimeout(() => {
         sendData(socket);
-    }, 10000);
+    }, 2000);
 
 }
