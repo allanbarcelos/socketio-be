@@ -23,8 +23,11 @@ app.use(allowCrossDomain);
 app.use(bodyParser);
 let x = true;
 
-const server = app.listen(3000,() => {
-    console.log('Started in 3000');
+
+const PORT = process.env.PORT || 3000;
+
+const server = app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
 
 const io = socket(server);
